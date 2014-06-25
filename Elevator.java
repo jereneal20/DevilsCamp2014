@@ -4,7 +4,7 @@ public class Elevator {
 	private int maxFloor;
 	private int currentFloor;
 	private int maxLoad;
-	private boolean open;
+	private boolean gateOpen;
 	
 	private ArrayList<Person> passengers;
 	
@@ -31,12 +31,14 @@ public class Elevator {
 		}
 	}
 	
-	public void setOpen(boolean open) {
+	public void setGateStatus(boolean open) {
+		this.gateOpen = open;
+		System.out.println("드루와 드루와!!");
 		// 문의 열린 상태 변경
 	}
 	
 	public void emergency(String message) {
-		// ????
+		// TODO
 	}
 	
 	public void printInfo() {
