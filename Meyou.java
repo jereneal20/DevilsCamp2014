@@ -23,7 +23,7 @@ public class Meyou {
 		Elevator elevator = new Elevator(MAX_FLOOR, MAX_WEIGHT);
 		
 		for (int i = 0; i < LOOP_COUNT; i++) {
-			elevator.setOpen(random.nextBoolean());
+			elevator.setGateStatus(random.nextBoolean());
 			elevator.enter(people[random.nextInt(people.length)]);
 			elevator.leave(people[random.nextInt(people.length)]);
 			elevator.move(random.nextInt(MAX_FLOOR));
