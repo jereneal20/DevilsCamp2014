@@ -4,6 +4,8 @@ public class Person {
 	
 	public Person(String name, int weight) {
 		// 이름과 무게를 설정
+		this.name = name;
+		this.weight = weight;
 	}
 	
 	public String getName() {
