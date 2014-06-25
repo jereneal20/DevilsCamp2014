@@ -19,6 +19,9 @@ public class Elevator {
 
 	public void move(int floor) {
 		// 1층 ~ maxFloor로 이동
+		if(floor<=maxFloor&&floor>0) {
+			this.currentFloor=floor;
+		} else System.out.println("그런 층 없습니다.");
 	}
 
 	public void enter(Person person) {
@@ -26,7 +29,11 @@ public class Elevator {
 	}
 
 	public void leave(Person person) {
-		// 열려있고, person이 있으면 내림
+		if (gateOpen) {
+			if (passengers.contains(person)) {
+				passengers.remove(person);
+			}
+		}
 	}
 
 	public void setGateStatus(boolean open) {
