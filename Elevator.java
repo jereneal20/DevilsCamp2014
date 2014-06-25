@@ -24,7 +24,7 @@ public class Elevator {
 	}
 
 	public void leave(Person person) {
-		if (open) {
+		if (gateOpen) {
 			if (passengers.contains(person)) {
 				passengers.remove(person);
 			}
