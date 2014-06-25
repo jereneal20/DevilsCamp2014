@@ -10,6 +10,11 @@ public class Elevator {
 
 	public Elevator(int maxFloor, int maxLoad) {
 		// 해당 class 초기화
+		this.passengers = new ArrayList<Person>();
+		this.maxFloor = maxFloor;
+		this.maxLoad = maxLoad;
+		this.gateOpen = false;
+		this.currentFloor = 1;
 	}
 
 	public void move(int floor) {
@@ -32,9 +37,14 @@ public class Elevator {
 	}
 
 	public void setGateStatus(boolean open) {
-		this.gateOpen = open;
-		System.out.println("드루와 드루와!!");
 		// 문의 열린 상태 변경
+		this.gateOpen = open;
+		if (this.gateOpen == true) {
+			System.out.println("드루와 드루와!!");
+		} else {
+			System.out
+					.println("Please Press the open butten. Now this gate is closed");
+		}
 	}
 
 	public void emergency(String message) {
@@ -43,11 +53,14 @@ public class Elevator {
 	}
 
 	public void printInfo() {
+		// 엘리베이터의 상태(층, 탑승객, 등) 출력
 		System.out.println("Current Floor : " + currentFloor);
 		for (int i = 0; i < passengers.size(); i++) {
 			System.out.print(passengers.get(i).getName() + " ");
 		}
-		System.out.println("\n");
-		// 엘리베이터의 상태(층, 탑승객, 등) 출력
+		if (passengers.size() > 1) {
+			System.out.println("\n");
+		}
+
 	}
 }
