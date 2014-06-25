@@ -19,16 +19,12 @@ public class Elevator {
 
 	public void move(int floor) {
 		// 1층 ~ maxFloor로 이동
-		if (floor <= maxFloor && floor > 0) {
-			this.currentFloor = floor;
-		} else
-			System.out.println("그런 층 없습니다.");
+		if(floor<=maxFloor&&floor>0) {
+			this.currentFloor=floor;
+		} else System.out.println("그런 층 없습니다.");
 	}
 
 	public void enter(Person person) {
-		if (person.getWeight() < 100) {
-			passengers.add(person);
-		}
 		// 전체 탑승객 + 새로운 탑승객의 무게가 maxLoad를 넘지 않고, 열려있으면 탑승
 	}
 
