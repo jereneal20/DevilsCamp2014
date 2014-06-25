@@ -21,7 +21,11 @@ public class Elevator {
 	}
 	
 	public void leave(Person person) {
-		// 열려있고, person이 있으면 내림
+		if (open) {
+			if (passengers.contains(person)) {
+				passengers.remove(person);
+			}
+		}
 	}
 	
 	public void setOpen(boolean open) {
