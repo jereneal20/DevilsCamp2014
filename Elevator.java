@@ -15,7 +15,7 @@ public class Elevator {
 	public void move(int floor) {
 		// 1층 ~ maxFloor로 이동
 		if(floor<=maxFloor&&floor>0) {
-			this.currentFLoor=floor;
+			this.currentFloor=floor;
 		} else System.out.println("그런 층 없습니다.");
 	}
 	
